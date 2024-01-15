@@ -4,3 +4,5 @@ console.log("no manden troyanos por favor");
 const greet = (name) => console.log(`Hi ${name}`);
 
 greet("Luis");
+
+let names= ["Abigail", "Zabdiel","Fernando"];

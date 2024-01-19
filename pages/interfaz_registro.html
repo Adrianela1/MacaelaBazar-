@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <center><img class="logo" src="./Imagenes/Imagen de WhatsApp 2024-01-16 a las 12.43.35_78537f17.jpg" alt="Logo de Macaela"></center>
+        <h1>¡TE ESTABAMOS ESPERANDO! REGISTRATE <br> :) 
+            </h1>
+        <form action="/enviar_registro" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre/s y apellido/s" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="usuario@algo.com" required>
+
+            <label for="celular"> Celular: </label>
+            <input type="celular" id="celular" name="celular" placeholder="+55" required>
+
+            <label for="password"> Contraseña:</label>
+            <input type="password" minlength="6" id="password" name="password" placeholder="Debe contener al menos 6 caracteres" required>
+
+            <label for="password">Ingresa nuevamente la contraseña:</label>
+            <input type="password" minlength="6" id="password" name="password" required>
+
+            <input type="enviar" value="Registrarse">
+        </form>
+        <p>Ya tienes una cuenta?<a class= "links red" target="_blank" href=""> Iniciar sesion </a></p>
+    </div>
+</body>
+</html>

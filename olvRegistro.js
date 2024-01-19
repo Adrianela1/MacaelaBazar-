@@ -1,1 +1,0 @@
-console.log("Creacion de interfaz de registro")

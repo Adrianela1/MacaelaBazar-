@@ -5,19 +5,13 @@ body {
     
 }
 
-.container-registro {
+.container-inicio-sesion {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
     border: solid 2px black;
-}
-
-.container-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 h1 {
@@ -34,7 +28,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="cel
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #900C3;
+    border: 1px solid #ddd;
     border-radius: 3px;
 }
 
@@ -46,32 +40,29 @@ input[type="submit"] {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    display: block;
 }
 
 input[type="submit"]:hover {
-    background-color: #5e6e7d;
+    background-color: #5e6e7d;}
+
+.btn2-container{
+        display: flex;
+        justify-content: center;
+}
+    
+.btn2-container input[type="submit"] {
+        margin: 0 5px;
 }
 
-.btn1-container{
-    display: flex;
-    justify-content: center;
-}
-
-.btn1-container input[type="submit"] {
-    margin: 0 5px;
-}
-.hr-2 {
+hr {
     border: none;
     height: 2px;
     background-color: black;
     margin: 20px auto;
-    width: 10%;
+    width: 70%;
 }
 
-.p-2{
+.p-1{
         text-align: center;
-}
-
-.p-3{
-    text-align: center;
 }

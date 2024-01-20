@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos_interfaz_inicio_sesion.css">
+    <title>Inicio de sesion</title>
+</head>
+<body>
+    <div class="container-inicio-sesion">
+        <h1>¡Hola de nuevo!  <br> :) 
+            </h1>
+        <form action="/enviar_registro" method="post">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="usuario@algo.com" required>
+
+            <label for="password"> Contraseña:</label>
+            <input type="password" minlength="6" id="password" name="password" placeholder="Debe contener al menos 6 caracteres" required>
+           
+            <div class="btn2-container">
+                <input type="submit" value="Iniciar sesion">
+            </div>
+        </form>
+        <hr>
+        <p class="p-1">¿Aun no tienes una cuenta? <a href="./interfaz_registro.html"><br>Registrate</p>
+    </div>
+</body>
+</html>

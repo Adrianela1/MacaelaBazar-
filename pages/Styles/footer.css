@@ -1,0 +1,30 @@
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.company-name {
+    font-size: 300%;
+    float: left;
+}
+
+.list-inline {
+    float: right;
+}
+
+
+.footer-links {
+    float: right;
+    left: 48%;
+}
+
+

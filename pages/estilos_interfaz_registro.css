@@ -34,7 +34,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="cel
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #900C3;
+    border: 1px solid #ddd;
     border-radius: 3px;
 }
 

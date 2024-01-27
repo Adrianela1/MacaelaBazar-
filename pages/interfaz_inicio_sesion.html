@@ -3,27 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos_interfaz_inicio_sesion.css">
     <title>Inicio de sesion</title>
+
 </head>
 <body>
-    <div class="container-inicio-sesion">
-        <h1>¡Hola de nuevo!  <br> :) 
-            </h1>
-        <form action="/enviar_registro" method="post">
+    <div class="card border-secondary mb-3" style="max-width: 37rem; padding: 1.25rem; ">
+        <h2 class="fw-bold text-center pt5">¡Hola de nuevo!</h2>
+        <div class="col">
+            <div class="text-center">
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="usuario@algo.com" required>
+                <div>
+                    <img src="/pages/usuario/image/icono-incio-sesion.svg " style="max-width: 15rem ; padding: 2.5rem;">
+                </div>
 
-            <label for="password"> Contraseña:</label>
-            <input type="password" minlength="6" id="password" name="password" placeholder="Debe contener al menos 6 caracteres" required>
-           
-            <div class="btn2-container">
-                <input type="submit" value="Iniciar sesion">
-            </div>
-        </form>
-        <hr>
-        <p class="p-1">¿Aun no tienes una cuenta? <a href="./interfaz_registro.html"><br>Registrate</p>
+                <form action="/enviar_resgistro">
+
+                    <div class="mb-4">
+                        <input type="email" class="form-control" placeholder="Correo electronico" name="email">
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="passwprd">
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="checkbox" name="connected" class="form-check-input"> 
+                        <label for="connected" class="form-check-label"> Mantener sesion abierta</label>
+                    </div>
+        
+                    <div class="d-grid">
+                        <button type="summit" class="btn btn-primary">Iniciar sesion</button>
+                    </div>
+        
+                    <div class="p-1">
+                        <span><a href=""><em>¿Olvidaste tu contraseña?</em> </a><br></span>
+                    </div>
+
+                    <div class="p-2">
+                        <span>¿Aun no tienes una cuenta? <br> <a href="./interfaz_registro.html">Registrate</a></span>
+                    </div>
+
+                    <div class="container w-100 my-5">
+                        <div class="row">
+                            <div class="col.12">Inicia sesion con google</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-outline-primary w-100 my-1">
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-1">
+                                        <img src="/pages/usuario/image/Google_ G _logo.svg.webp " width="32px">
+                                    </div>
+
+                                    <div class="col-10 text-center">
+                                        Google
+                                    </div>
+
+                                </div>
+                     
+                            </button>
+                        </div>
+                    </div> 
+
+                </form>
+            </div>  
+        </div>         
     </div>
 </body>
 </html>

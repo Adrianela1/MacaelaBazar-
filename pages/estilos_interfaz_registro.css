@@ -59,6 +59,7 @@ input[type="submit"]:hover {
 
 .btn1-container input[type="submit"] {
     margin: 0 5px;
+    border-radius: 10px
 }
 .hr-2 {
     border: none;

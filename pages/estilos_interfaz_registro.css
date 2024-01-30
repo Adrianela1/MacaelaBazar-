@@ -57,6 +57,7 @@ input[type="checkbox"] {
 .btn-primary:hover {
     background-color: #872341;
     border-color: #872341;
+    
 }
 
 .hr-1{
@@ -75,7 +76,7 @@ input[type="checkbox"] {
     width: 100%;
 }
 
-.p-2{
+.p-options{
     margin: 1.25rem;
 }
 

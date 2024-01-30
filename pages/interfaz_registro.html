@@ -6,93 +6,64 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos_interfaz_registro.css">
 
-    <title>Inicio de sesion</title>
+    <title>Registro</title>
 
 </head>
 <body>
-    <div class="card border-secondary mb-3" style="max-width: 37rem; padding: 1.25rem; ">
-
-        <h2 class="fw-bold text-center pt5">¡ESTABAMOS ESPERANDOTE! </h2>
-
-        <div class="col">
-            <div class="text-dark">
-
-                <div class="img-logo">
-                    <img src="./usuario/image/macaela_logo.svg" style="max-width: 25rem ; padding: .2rem;">
-                </div>
-
-                <form action="/enviar_resgistro">
-
-                    <div class="mb-4">
-                        <label for="Nombre">Nombre</label>
-                        <input type="text" class="form-control" placeholder="Nombre y apellidos" name="username" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="email">Correo electronico</label>
-                        <input type="email" class="form-control" placeholder="usuario@domain.com" name="email" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="Telefono">Numero de telefono</label>
-                        <input type="tel" class="form-control" placeholder="+52" name="telefono" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label dor="password">Contraseña</label>
-                        <input type="password" class="form-control" minlength="6" placeholder="Debe contener al menos 6 caracteres" name="password" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label dor="password2">Ingrese nuevamente la contraseña</label>
-                        <input type="password" class="form-control" minlength="6" name="password" required>
-                    </div>
-
+   
+    <main class="main-container">
         
-                    <div class="d-grid">
-                        <button type="summit" class="btn btn-primary">Registrarse</button>
-                    </div>
+        <div class="div-main">
+            
+            <form action="/enviar_resgistro">
 
-                    <div class="container w-100 my-5">
-                        <div class="row">
-                            <div class="text-center col.12"> Creando una cuenta usted esta aceptando nuestros <a class="links red" href=""> Terminos y condiciones</a></div>
-                        </div>
-                    </div>
-
-                <hr>
-        
-                <div class="container w-100 my-5">
-                    <div class="row">
-                        <div class="text-center col.12 "><em><a href="/interfaz_inicio_sesion.html"> ¿Ya tienes una cuenta? </a></em></div>
-                    </div>
-                </div>
+                <h1 class="text-center mt-3">¡ESTABAMOS ESPERANDOTE!</h1>
                 
-                <hr>
-
-                <div class="container w-100 my-5">
-                    <div class="row">
-                        <div class="text-center col.12 ">Registrate usando tu cuenta de Goolge</div>
-                    </div>
+                <div class="img-logo">
+                    <img src="./usuario/image/macaela_logo.svg" >
                 </div>
 
-                <div class="row">
-                    <div class="col">
+                <div class="mb-4">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre y apellidos" name="username" required>
+                </div>
 
-                        <button class="btn btn-outline-primary w-100 my-1">
-                            <div class="row align-items-center">
-                                <div class="col-1">
-                                    <img src="/usuario/image/Google_ G _logo.svg.webp" width="32px">
-                                </div>
-                                <div class="col-10 text-center">
-                                    Google
-                                </div>
-                            </div>
-                        </button>
-                    </div>
-               </div>  
+                <div class="mb-4">
+                    <label for="email">Correo electronico</label>
+                    <input type="email" class="form-control" placeholder="usuario@domain.com" name="email" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="Telefono">Numero de telefono</label>
+                    <input type="tel" class="form-control" placeholder="+52" name="telefono" required>
+                </div>
+
+                <div class="mb-4">
+                    <label dor="password">Contraseña</label>
+                    <input type="password" class="form-control" minlength="6" placeholder="Debe contener al menos 6 caracteres" name="password" required>
+                </div>
+
+                <div class="mb-4">
+                    <label dor="password2">Ingrese nuevamente la contraseña</label>
+                    <input type="password" class="form-control" minlength="6" name="password" required>
+                </div>
+    
+                <div class="d-grid">
+                    <button type="summit" class="btn btn-primary">Registrarse</button>
+                </div>
+            
+                <div class="p-2">
+                    <hr class="hr-1">
+                    <p class="text-center mt-3">Creando una cuenta usted esta aceptando nuestros<br><a class="links red" href=""> Terminos y condiciones </a></p>
+                    <hr class="hr-2">
+                    <p class="text-center mt-3"><a href="/pages/interfaz_inicio_sesion.html"> ¿Ya tienes una cuenta?</p>
+                </div>
+
             </form>
-            </div>  
-        </div>         
-    </div>
+
+        </div>
+
+    </main>
+
 </body>
 </html>

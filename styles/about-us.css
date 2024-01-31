@@ -1,12 +1,37 @@
-.about-banner {
-    border-radius: 20px;
+.titulo {
+    color: #900C3F;
+}
+.texto { 
+color: black;
+text-align: justify;
+
+}
+img {
+    border-radius: 15px;
+}
+.image_description{
     width: 100%;
-    height: 320px;
+    max-width: 300px;
+    height: 250px;
+}
+.image_description img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-
+.image_value{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.center_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill,minmax(330px, 1fr));
     gap: 1rem;
 }

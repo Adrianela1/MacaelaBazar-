@@ -17,6 +17,7 @@ const fetchData = async () => {
  */
 const createCardProduct = (product) => {
     const card = document.createElement("article");
+    card.classList.add("col-12", "col-sm-3");
     const header = document.createElement("header"); // Imagen del producto
     const footer = document.createElement("footer"); // El nombre y precio del producto
     const imageProduct = document.createElement("img");

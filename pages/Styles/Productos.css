@@ -1,12 +1,14 @@
 .product-navigation {
     position: fixed;
-    top: 50%; /* Centra verticalmente /
+    top: 50%; /* Centra verticalmente */
     left: 5%;
-    width: 280px; / Ancho del menú de navegación */
+    width: 280px; /* Ancho del menú de navegación */
     height: 70%;
     padding: 20px;
     transform: translateY(-50%);
+    overflow-y: auto;
 }
+
 
 .product-navigation h2 {
     margin-bottom: 20px;
@@ -27,9 +29,16 @@
 }
 h2 {
     color: #900C3F; 
-
+    
 }
+
+
+
+ 
+
+
 .circle-button {
+    
     width: 40px;
     height: 40px;
     border-radius: 50%; 
@@ -37,6 +46,8 @@ h2 {
     color: #fff; 
     border: none; 
     cursor: pointer;
+   
+    
     
 }
 

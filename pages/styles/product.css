@@ -1,0 +1,25 @@
+
+#product {
+    gap: 5rem;
+}
+
+footer{
+    justify-content: left;
+    text-align: left;
+}
+
+
+.card-product__header {
+    height: 300px;
+}
+
+.card-product__image {
+    width: 600px;
+    height: 600px;
+    max-width: 100%; /* Ajusta según sea necesario */   
+    border-radius: 30%; 
+}
+
+#addToCartBtn {
+    background-color: #900C3F;
+}

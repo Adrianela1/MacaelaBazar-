@@ -1,13 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="css/footer.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Macaela</title>
-  </head>
-  <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces a Bootstrap CSS y JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>E-Commerce Shop</title>
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Macaela</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Acerca de nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Barra de navegación-->
+
+    <main class="container mt-4">
+
+        <section class="container" >
+            <h2 class="fw-bold">Nos diferenciamos por</h2>
+            <div class="row">
+                <article class="col-12 col-sm-6 col-md-3">
+                    <button class="fondoimg">
+                        <img src="/assets/icons/shop.svg" alt="icono">
+                    </button>
+                    <p class="fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nesciunt impedit nostrum repellat
+                        dolorem enim?
+                    </p>
+
+
+                </article>
+
+                <article class="col-12 col-sm-6 col-md-3">
+                    <button class="fondoimg">
+                        <img src="/assets/icons/shop.svg" alt="icono">
+                    </button>
+                    <p class="fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nesciunt impedit nostrum repellat
+                        dolorem enim?
+                    </p>
+
+
+                </article>
+
+                <article class="col-12 col-sm-6 col-md-3">
+                    <button class="fondoimg">
+                        <img src="/assets/icons/shop.svg" alt="icono">
+                    </button>
+                    <p class="fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nesciunt impedit nostrum repellat
+                        dolorem enim?
+                    </p>
+
+
+                </article>
+
+                <article class="col-12 col-sm-6 col-md-3">
+                    <button class="fondoimg">
+                        <img src="/assets/icons/shop.svg" alt="icono">
+                    </button>
+                    <p class="fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nesciunt impedit nostrum repellat
+                        dolorem enim?
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="fw-bold">Productos Populares</h2>
+            <div>
+                <article>
+                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
+                    <p>Blue Jacket</p>
+                </article>
+                <article>
+                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
+                    <p>Blue Jacket</p>
+                </article>
+                <article>
+                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
+                    <p>Blue Jacket</p>
+                </article>
+                <article>
+                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
+                    <p>Blue Jacket</p>
+                </article>
+            </div>
+            <!-- Contenido de productos destacados -->
+        </section>
+
+        <section>
+            <h2 class="fw-bold">Eventos</h2>
+            <div class="d-flex flex-column gap-3">
+                <article class="d-flex flex-column flex-sm-row">
+                    <div class="col-12 col-sm-6">
+                        <img class="img-fluid imgborder" src="https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg" alt="Imagen de Productos Destacados">
+                    </div>
+                    <!-- d-flex , salto de linea, br, propiedad gap, display grid y flex   -->
+                    <div class="col-12 col-sm-6 d-flex flex-column align-items-center justify-content-center events-section">
+                        <div class="p-2">
+                            <p class="colortext"><b>Participa en el elemento rosa y gana un 15% de descuento</b></p>
+                            <button class="colorbtn">Inscribete</button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="d-flex flex-column flex-sm-row">
+                    <div class="col-12 col-sm-6">
+                        <img class="img-fluid imgborder" src="https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg" alt="Imagen de Productos Destacados">
+                    </div>
+                    <!-- d-flex , salto de linea, br, propiedad gap, display grid y flex   -->
+                    <div class="col-12 col-sm-6 d-flex flex-column align-items-center justify-content-center events-section">
+                        <div class="p-2">
+                            <p class="colortext"><b>Participa en el elemento rosa y gana un 15% de descuento</b></p>
+                            <button class="colorbtn">Inscribete</button>
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- Atividades, talleres, anuncios -->
+        </section>
+    </main>
     <footer class="footer">
       <div class="container">
           <div class="row">
@@ -32,6 +169,7 @@
           </div>
       </div>
   </footer>
-    <script type="module" src="/main.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+ 
 </html>

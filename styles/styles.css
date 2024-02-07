@@ -1,4 +1,4 @@
-.fondoimg{
+.fondoimg {
     background-color: #fafafa;
     border-radius: 10px;
     padding: 10px;
@@ -15,7 +15,7 @@
     color: #ffffff;
     font-size: 1.2rem;
 }
-.colorbtn{
+.colorbtn {
     border: 3px solid white;
     border-radius: 5px;
     background-color: white;
@@ -24,22 +24,20 @@
 .colorbtn:hover {
     background-color: #b74e6d;
     border-color: #a33e5d;
-    color:#ffffff;
-    
+    color: #ffffff;
 }
 
 .events-section {
     background-color: #900c3f;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
-
 }
-h2{
-    color: #900C3F;
+h2 {
+    color: #900c3f;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -49,7 +47,7 @@ body {
 }
 
 header {
-    background-color: #900C3F;
+    background-color: #900c3f;
     color: #fff;
     padding: 1rem;
 }
@@ -85,12 +83,10 @@ section {
     margin-bottom: 30px;
 }
 
-
 @media (max-width: 576px) {
     .imgborder {
         border-top-right-radius: 16px;
         border-bottom-left-radius: 0px;
-
     }
 
     .events-section {

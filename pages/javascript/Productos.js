@@ -17,23 +17,43 @@ const fetchData = async () => {
  */
 const createCardProduct = (product) => {
     const card = document.createElement("article");
+    const buttonCart =  document.createElement("button");
+    const containerProductInfo = document.createElement("div");
+    const imgCart = document.createElement("img");
     const header = document.createElement("header"); // Imagen del producto
     const footer = document.createElement("footer"); // El nombre y precio del producto
     const imageProduct = document.createElement("img");
     const productName = document.createElement("p");
     const productPrice = document.createElement("p");
 
+    card.classList.add("col-12", "col-sm-3");
+    footer.classList.add("d-flex", "gap-2");
+    
+
+    imgCart.src = "../../assets/icons/cart.svg";
     imageProduct.src = product.image;
     productName.textContent = product.title;
     productPrice.textContent = product.price;
+    
+    buttonCart.appendChild(imgCart);
 
     header.appendChild(imageProduct);
 
-    footer.appendChild(productName);
-    footer.appendChild(productPrice);
+    containerProductInfo.appendChild(productName);
+    containerProductInfo.appendChild(productPrice);
+    
+    footer.appendChild(containerProductInfo);
+    footer.appendChild(buttonCart);
 
     card.appendChild(header);
     card.appendChild(footer);
+    
+    
+    header.classList.add("card-product__header");
+    imageProduct.classList.add("card-product__image");
+    buttonCart.classList.add("button-cart__image");
+
+
 
     products.appendChild(card);
 };

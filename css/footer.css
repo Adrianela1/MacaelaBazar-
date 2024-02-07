@@ -1,0 +1,23 @@
+
+.footer {
+    background-color: #900C3F;
+    color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a{
+    color: #ffffff;
+}
+
+.company-name {
+    font-size: large;
+}
+
+
+li{
+    
+}
+

@@ -53,35 +53,48 @@ header{
     margin-left: 20px;
 }
 
-.place, .total {
+.place {
     margin: 0;
        
 }
-
+.total{
+    float: right;
+    margin-right: 50px;
+ }
+ .info textarea {
+    width: 50%;
+    height: 50px;
+    resize: vertical;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 .status-buttons {
-    text-align: center;
+    display: flex;
+    justify-content: space-between; 
     margin-top: 20px;
 }
 
 button {
     padding: 10px 20px;
-    margin: 0 10px;
-    border:none;
-    border-radius: 5px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .confirmed {  
     background-color: #ffffff;
     color: rgb(10, 10, 10);
-    border-radius: 20px;
     border: solid #900c3f;
-
+    margin-left: 70px;
+    
    
 }
 
 .completed {
     background-color: #900c3f;
     color: white;
-    border-radius: 20px;
+    margin-right: 50px;
+    
 }

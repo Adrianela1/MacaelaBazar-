@@ -79,6 +79,9 @@ h2 {
 @media (min-width: 768px) {
     .sidebar {
         display: block;
+        position: sticky;
+        top: 0;
+        height: 90vh;
     }
 
     .filter-btn {

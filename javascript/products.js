@@ -4,6 +4,8 @@ const electronicsFilter = document.getElementById("electronics");
 const womensFilter = document.getElementById("womens");
 
 const MENS_CLOTHING = "men's clothing";
+const ELECTRONICS = "electronics";
+const WOMENS_CLOTHING = "women's clothing";
 
 const ALBUM_API = "https://fakestoreapi.com/products";
 
@@ -64,30 +66,67 @@ const removeElements = (products) => {
     }
 };
 
-// Esperar a que carge el HTML y todos los archivos (JS, CSS)
+
+
 window.addEventListener("DOMContentLoaded", async () => {
     // Mandar a la API
     const listProducts = await fetchData();
 
-    // mostrar el contenido
+    // mostrar el contenido inicialmente
     listProducts.forEach((product) => {
         createCardProduct(product);
     });
 
     // Darle funcionalidad al filtrado para mostrar por categoría
     mensFilter.addEventListener("click", () => {
-        //Se filtra por categoría
-        const resultFilter = listProducts.filter((product) =>
-            product.category.includes(MENS_CLOTHING)
-        );
+        filterProductsByCategory(MENS_CLOTHING);
+    });
 
-        // Se limpia la lista antigua
-        // products.innerHTML = "";
-        removeElements(listProducts);
+    electronicsFilter.addEventListener("click", () => {
+        filterProductsByCategory(ELECTRONICS);
+    });
 
-        // Se muestra la nueva lista
-        resultFilter.forEach((product) => {
-            createCardProduct(product);
-        });
+    womensFilter.addEventListener("click", () => {
+        filterProductsByCategory(WOMENS_CLOTHING);
+    });
+
+    // Filtrar productos por precio alto o bajo
+    lowPriceCheckbox.addEventListener("change", () => {
+        if (lowPriceCheckbox.checked) {
+            filterProductsByPrice("low");
+        }
+    });
+
+    highPriceCheckbox.addEventListener("change", () => {
+        if (highPriceCheckbox.checked) {
+            filterProductsByPrice("high");
+        }
     });
 });
+
+// Función para filtrar productos por categoría
+const filterProductsByCategory = (category) => {
+    const resultFilter = listProducts.filter((product) =>
+        product.category.includes(category)
+    );
+
+    removeElements(products);
+    resultFilter.forEach((product) => {
+        createCardProduct(product);
+    });
+};
+
+// Función para filtrar productos por precio alto o bajo
+const filterProductsByPrice = (priceType) => {
+    let resultFilter;
+    if (priceType === "high") {
+        resultFilter = listProducts.sort((a, b) => b.price - a.price);
+    } else if (priceType === "low") {
+        resultFilter = listProducts.sort((a, b) => a.price - b.price);
+    }
+
+    removeElements(products);
+    resultFilter.forEach((product) => {
+        createCardProduct(product);
+    });
+};

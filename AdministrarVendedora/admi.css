@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dropdown_button_container {
+    margin-top: 20px; 
+    text-align: right; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    position: relative; /* Asegura que el menú desplegable se posicione en relación con este contenedor */
+    margin-right: 20px;
+}
+
+.dropdown_button_label {
+    display: inline-flex; 
+    cursor: pointer;
+    background-color: #900c3f; /* Fondo más oscuro para mayor contraste */
+    color: #ffffff; /* Color del texto en blanco para mayor contraste */
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 30px; 
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute; 
+    right: 0; 
+    top: 100%; /* Coloca el menú justo debajo del botón */
+    background-color: transparent; /* Fondo claro para el menú */
+    border: transparent; /* Borde para el menú */
+    padding: 10px; 
+    min-width: 250px; /* Ancho del menú, ajustar según sea necesario */
+    white-space: nowrap;
+}
+
+.dropdown_check:checked + .dropdown_content {
+    display: block;
+}
+
+.dropdown_check {
+    display: none; 
+}
+
+.dropdown_check:checked + .dropdown_content {
+    display: block;
+}
+
+.nav{
+    background-color: #fafafa;
+
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has( .dropdrown:target){
+    --img1: scale(0);
+    --img2: scale(1);
+
+    /*--clip: inset(0 0 0 0);*/
+}
+
+.nav_container{
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-areas: "title img";
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.nav_title{
+    color: #000;
+    grid-area: title;
+}
+
+.nav_menu{
+    grid-area: img;
+    position:relative;
+    z-index: 10;
+
+    transform: var(--img1);
+}
+
+.nav_menu--second{
+    transform: var(--img2);   
+}
+
+.nav_icon{
+    width: 30px;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.dropdown{
+    position: absolute;
+    background-color: #872341;
+    width: 75%;
+    max-width: 300px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+    
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+
+    overflow-y: auto;
+}
+
+.dropdown_list{
+    list-style: none;
+}
+
+.dropdown_link{
+    color: #000;
+    padding: 1rem .7rem;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    position: relative;
+    background-color: var(--bg, transparent);
+    border-radius: 6px;
+}
+
+.dropdown_list:has( :checked) {
+    --rows: 1fr;
+    --rotate: rotate(180deg);
+    --bg: #1F1F1F;
+}
+.dropdown_check{
+    position: absolute;
+    width: 100%;
+    height: 100;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropdown_arrow{
+    margin-left: auto;
+    transform: var(--rotate, 0);
+    transition: .2s transform;
+    /*border-color:*/ 
+}
+
+.dropdown_content{
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: .3s grid-template-rows;
+
+}
+
+.dropdown_sub{
+    overflow: hidden;
+}
+
+.dropdown_li{
+    width: 85%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.dropdown_anchor {
+    padding: 1em 0;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    display: inline-flex;
+    align-items: center;     
+    padding: 10px;
+}
+
+.dropdown_anchor:hover {
+    transform: scale(1.05); 
+}
+
+.dropdown_li {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+    flex-direction: row-reverse; 
+}
+
+.dropdown_li img {
+    margin-right: 10px; 
+}
+
+.dropdown_button_label {
+    display: inline-block; /* Hace que el botón sea en línea para respetar la alineación de texto */
+    cursor: pointer;
+    background-color: #900c3f; /* Fondo del botón */
+    padding: 10px; /* Ajusta según sea necesario */
+    border: 1px solid #d0d0d0; /* Ajusta según sea necesario */
+    color: #ffffff; /* Color del texto */
+}
+
+

@@ -20,11 +20,33 @@ header h1 {
     margin: 0;
 }
 
-main {
+.container {
+    border-radius: 10px;
+}
+
+.banner {
+ width: 100%;
+ top: 0;
+ left: 0;
+ height: 130px;
+ background-color: #b74e6d;
+ position: absolute;
+ 
+}
+.description {
+ 
+ background-color: rgb(64, 64, 205);
+ text-align: center;
+ position: relative;
+ top: 8px;
+ left: 0;
+}
+
+/* main {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-}
+} */
 
 h2 {
     color: #900C3F;

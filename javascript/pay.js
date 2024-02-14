@@ -7,10 +7,11 @@ const getInputValue = (id) => {
 form.addEventListener("submit",(event)=>{
     event.preventDefault();
     console.log(event)
-    const name = getInputValue("Nombre de la tarjeta")
-    const lastName = getInputValue("Nombre y Apellido")
-    const expiration = getInputValue("Fecha de vencimiento")
-    const jsonData = JSON.stringify({name, lastName, expiration});
+    const cardNumber = getInputValue("card-number")
+    const username = getInputValue("username")
+    const expirationDate = getInputValue("expiration-date")
+    const securityCode = getInputValue("security-code")
+    const jsonData = JSON.stringify({cardNumber, username, expirationDate,securityCode});
     console.log(jsonData); // Muestra los datos en formato JSON en la
     alert(jsonData);
 })

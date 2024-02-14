@@ -11,47 +11,48 @@
 
 <body>
     <div class="container">
-        <h1>Pago</h1>
-        <div class="row justify-content-center">
-            <div class="">
-                <form id="pay-form" action="./src/main/java/controllers/FormController.java/enviar-formulario"
-                    method="post">
-
-                    <div class="form-group d-flex gap-3 justify-content-between  mb-2">
-                        <label for="nombre">Nombre de la tarjeta:</label>
-                        <input type="text" class="form-control mx-input" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="form-group d-flex gap-3 justify-content-between mb-2">
-                        <label for="email"> Nombre y Apellido:</label>
-                        <input type="email" class="form-control mx-input" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group d-flex gap-3 justify-content-between mb-2">
-                        <label for="comentarios">Fecha de vencimiento:</label>
-                        <input type="fecha de vencimiento" class="form-control mx-input" id="fecha de vencimiento" name="fecha de vencimiento" required>
-                    </div>
-                    <div class="form-group d-flex gap-3 justify-content-between mb-2">
-                        <label for="código de seguridad"> Código de seguridad:</label>
-                        <input type="código de seguridad" class="form-control mx-input" id="código de seguridad" name="código de seguridad" required>
-                    </div>
-
-                    <div class="content-center"><button type="submit" class="btn btn-primary button">Pagar</button>
-                    </div>
-                    <article class="col-12 col-sm-6">
-                        <div class="image_description">
-                            <img width="500" src=" " alt="">
+        <h1 class="titulo">Pago</h1>
+        <div class="content-center">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <form id="pay-form" action="./src/main/java/controllers/FormController.java/enviar-formulario"
+                        method="post">
+    
+                        <div class="mb-2">
+                            <label class="d-block" for="card-number">Número de la tarjeta:</label>
+                            <input type="text" class="form-control" id="card-number" name="card-number" required>
                         </div>
-                    </article>
-
-                  
-
-                </form>
-
-
+                        <div class="mb-2">
+                            <label class="d-block" for="username">Nombre y Apellido:</label>
+                            <input type="text" class="form-control" id="username"
+                                name="username" required>
+                        </div>
+                        <div class="mb-2 row">
+                            <div class="col-md-6">
+                                <label for="expiration-date">Fecha de vencimiento:</label>
+                                <input type="text" class="form-control" id="expiration-date"
+                                    name="expiration-date" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="security-code">Código de seguridad:</label>
+                                <input type="text" class="form-control" id="security-code"
+                                    name="security-code" required>
+                            </div>
+                        </div>
+                        <div class="content-center"><button type="submit" class="btn btn-primary button">Pagar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="image_description">
+                        <img width="500" src="../assets/images/istockphoto-533833660-612x612.jpg " alt="">
+                    </div>
+                </div>
             </div>
+
         </div>
-    </div>
-    <script src="..//javascript/pay.js"></script>
+    </div> 
+    <script src="../javascript/pay.js"></script>
 </body>
 
 </html>

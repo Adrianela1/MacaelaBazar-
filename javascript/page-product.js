@@ -5,53 +5,38 @@ const fetchProduct = async (productId) => {
         const response = await fetch(PRODUCT_API + productId);
         return await response.json();
     } catch (error) {
-        console.error('Error al obtener detalles del producto:', error);
+        console.error("Error al obtener detalles del producto:", error);
         return null;
     }
 };
 
-const createCardProduct = (product) => {
-    const card = document.createElement("article");
-    const containerProductInfo = document.createElement("div");
-    const header = document.createElement("header");
-    const footer = document.createElement("footer");
-    const productName = document.createElement("p");
-    const productPrice = document.createElement("p");
-    const imageProduct = document.createElement("img");
+const selectProductElement = (atribute) =>
+    document.querySelector(`.product__${atribute}`);
 
-    imageProduct.src = product.image;
-    productName.textContent = product.title;
-    productPrice.textContent = product.price;
+const createProductView = ({ title, description, price, image }) => {
+    const productTitle = selectProductElement("title");
+    const productDescription = selectProductElement("description");
+    const productPrice = selectProductElement("price");
+    const productImage = selectProductElement("image");
 
-    header.appendChild(imageProduct);
-
-    containerProductInfo.appendChild(productName);
-    containerProductInfo.appendChild(productPrice);
-
-    footer.appendChild(containerProductInfo);
-
-    card.appendChild(header);
-    card.appendChild(footer);
-
-    header.classList.add("card-product__header");
-    imageProduct.classList.add("card-product__image");
-
-    document.body.appendChild(card); 
-}
+    productTitle.textContent = title;
+    productDescription.textContent = description;
+    productPrice.textContent = `$${price}`;
+    productImage.src = image;
+    productImage.alt = title;
+};
 
 window.addEventListener("DOMContentLoaded", async () => {
-    
-    const productId = 1;
+    const productId = 9;
     const product = await fetchProduct(productId);
 
     if (product) {
-        createCardProduct(product);
+        createProductView(product);
     } else {
-        console.error('No se pudo obtener el producto.');
+        console.error("No se pudo obtener el producto.");
     }
 });
 
-document.getElementById('addToCartBtn').addEventListener('click', function() {
-    alert('Producto agregado al carrito');
-  });
-  
+document.getElementById("addToCartBtn").addEventListener("click", function() {
+    alert("Producto agregado al carrito");
+});

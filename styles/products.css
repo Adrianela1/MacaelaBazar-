@@ -25,6 +25,7 @@ ul {
     text-align: center;
     font-size: 1.2em;
 }
+
 h2 {
     color: #900c3f;
     font: bold;
@@ -48,6 +49,15 @@ h2 {
 .filter-btn {
     background-color: transparent;
     border: none;
+}
+
+.filter-bar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 .card-product__header {
@@ -86,5 +96,11 @@ h2 {
 
     .filter-btn {
         display: none;
+    }
+
+    .filter-bar {
+        display: none;
+        position: relative;
+        box-shadow: none;
     }
 }

@@ -10,36 +10,36 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container d-flex flex-column align-items mt-5">
         <h1 class="titulo">Pago</h1>
         <div class="content-center">
             <div class="row">
                 <div class="col-12 col-sm-6">
                     <form id="pay-form" action="./src/main/java/controllers/FormController.java/enviar-formulario"
                         method="post">
-    
+
                         <div class="mb-2">
                             <label class="d-block" for="card-number">Número de la tarjeta:</label>
                             <input type="text" class="form-control" id="card-number" name="card-number" required>
                         </div>
                         <div class="mb-2">
                             <label class="d-block" for="username">Nombre y Apellido:</label>
-                            <input type="text" class="form-control" id="username"
-                                name="username" required>
+                            <input type="text" class="form-control" id="username" name="username" required>
                         </div>
                         <div class="mb-2 row">
                             <div class="col-md-6">
                                 <label for="expiration-date">Fecha de vencimiento:</label>
-                                <input type="text" class="form-control" id="expiration-date"
-                                    name="expiration-date" required>
+                                <input type="text" class="form-control" id="expiration-date" name="expiration-date"
+                                    required>
                             </div>
                             <div class="col-md-6">
                                 <label for="security-code">Código de seguridad:</label>
-                                <input type="text" class="form-control" id="security-code"
-                                    name="security-code" required>
+                                <input type="text" class="form-control" id="security-code" name="security-code"
+                                    required>
                             </div>
                         </div>
-                        <div class="content-center"><button type="submit" class="btn btn-primary button">Pagar</button>
+                        <div class="d-flex justify-content-end"><button type="submit"
+                                class="btn btn-primary button">Pagar</button>
                         </div>
                     </form>
                 </div>
@@ -51,7 +51,7 @@
             </div>
 
         </div>
-    </div> 
+    </div>
     <script src="../javascript/pay.js"></script>
 </body>
 

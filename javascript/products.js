@@ -17,11 +17,12 @@ const fetchData = async () => {
 /**
  * Se encarga de crear la tarjeta de producto
  */
-const createCardProduct = (product) => {
+const createCardProduct = ({ id, title, price, image }) => {
+    const link = document.createElement("a");
     const card = document.createElement("article");
 
-    const header = document.createElement("header"); // Imagen del producto
-    const footer = document.createElement("footer"); // El nombre y precio del producto
+    const header = document.createElement("header");
+    const footer = document.createElement("footer");
 
     const imgCart = document.createElement("img");
     const imageProduct = document.createElement("img");
@@ -34,9 +35,9 @@ const createCardProduct = (product) => {
     footer.classList.add("d-flex", "justify-content-between", "gap-2");
 
     imgCart.src = "../../assets/icons/cart-white.svg";
-    imageProduct.src = product.image;
-    productName.textContent = product.title;
-    productPrice.textContent = product.price;
+    imageProduct.src = image;
+    productName.textContent = title;
+    productPrice.textContent = price;
 
     buttonCart.appendChild(imgCart);
 
@@ -48,8 +49,12 @@ const createCardProduct = (product) => {
     footer.appendChild(containerProductInfo);
     footer.appendChild(buttonCart);
 
-    card.appendChild(header);
-    card.appendChild(footer);
+    link.href = `product.html?id=${id}`;
+
+    link.appendChild(header);
+    link.appendChild(footer);
+
+    card.appendChild(link);
 
     header.classList.add("card-product__header");
     imageProduct.classList.add("card-product__image");

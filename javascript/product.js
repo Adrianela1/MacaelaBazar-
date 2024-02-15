@@ -26,8 +26,13 @@ const createProductView = ({ title, description, price, image }) => {
     productImage.alt = title;
 };
 
+const getCurrentProductId = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("id");
+};
+
 window.addEventListener("DOMContentLoaded", async () => {
-    const productId = 9;
+    const productId = getCurrentProductId();
     const product = await fetchProduct(productId);
 
     if (product) {

@@ -52,6 +52,20 @@ input[type="checkbox"] {
     margin-right: 0.5rem;
 }
 
+
+.checkbox-container {
+    margin-right: 6px;
+    text-align: center;
+
+}
+
+label[for="check-vendor"] {
+    font-weight: 500;
+    color: #900C3F;
+    cursor: pointer;
+}
+
+
 .btn-primary {
     background-color: #900c3f;
     border-color: #900c3f;

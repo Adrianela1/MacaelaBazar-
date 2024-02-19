@@ -14,7 +14,7 @@
 .banner__description {
     position: absolute;
     padding: 1rem;
-    top: 35%;
+    top: 28%;
     left: 50%;
     width: 80%;
     transform: translate(-50%, -50%);
@@ -106,11 +106,17 @@ section {
     }
 
     .banner__description {
-        top: 50%;
+        top: 40%;
     }
 
     .banner__description h1 {
         font-size: 3rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    .banner__description {
+        top: 35%;
     }
 }
 

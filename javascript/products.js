@@ -37,7 +37,7 @@ const createCardProduct = ({ id, title, price, image }) => {
     imgCart.src = "../../assets/icons/cart-white.svg";
     imageProduct.src = image;
     productName.textContent = title;
-    productPrice.textContent = price;
+    productPrice.textContent = `$${price}`;
 
     buttonCart.appendChild(imgCart);
 
@@ -58,6 +58,8 @@ const createCardProduct = ({ id, title, price, image }) => {
 
     header.classList.add("card-product__header");
     imageProduct.classList.add("card-product__image");
+    productName.classList.add("line-clamp");
+    productPrice.classList.add("fw-bold", "fs-5");
     buttonCart.classList.add("button-cart__image");
 
     products.appendChild(card);

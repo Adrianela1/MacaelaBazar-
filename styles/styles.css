@@ -1,3 +1,45 @@
+.banner__main-page {
+    width: 100%;
+    height: 450px;
+}
+
+.banner__video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.banner__description {
+    position: absolute;
+    padding: 1rem;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner__description h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.banner__description a {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-inline: auto;
+    text-decoration: none;
+    color: #000000;
+}
+
+.content-center {
+    display: grid;
+    place-content: center;
+}
+
 .fondoimg {
     background-color: #fafafa;
     border-radius: 10px;

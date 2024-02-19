@@ -100,6 +100,44 @@ section {
     margin-bottom: 30px;
 }
 
+#products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card-product__header {
+    height: 300px;
+}
+
+.card-product__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.button-cart__image {
+    background-color: #900c3f;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+article a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @media (min-width: 768px) {
     .banner__main-page {
         height: 450px;

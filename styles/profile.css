@@ -1,0 +1,110 @@
+body {
+    overflow-x: hidden;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+}
+
+.banner__image {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mobile-profile {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+}
+
+.card-presentation {
+    display: none;
+}
+
+h2 {
+    color: #900c3f;
+}
+
+.product {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-info {
+    flex: 2;
+    padding: 20px;
+}
+
+.product-name {
+    margin-top: 0;
+}
+
+.product-description {
+    color: #666;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #900c3f;
+    --bs-btn-border-color: #900c3f;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #b74e6d;
+    --bs-btn-hover-border-color: #900c3f;
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #b74e6d;
+    --bs-btn-active-border-color: #900c3f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #900c3f;
+    --bs-btn-disabled-border-color: #900c3f;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        width: 100%;
+        height: 400px;
+    }
+
+    .mobile-profile {
+        display: none;
+    }
+
+    .mobile-presentation {
+        display: none;
+    }
+
+    .card-presentation {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 30px;
+        background-color: #ffffff;
+        max-width: 600px;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+}

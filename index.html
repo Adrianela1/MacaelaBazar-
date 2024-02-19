@@ -49,9 +49,21 @@
             </div>
         </div>
     </nav>
-    <!-- Barra de navegación-->
-
     <main class="container mt-4">
+        <section class="banner__main-page">
+            <video autoplay loop muted class="banner__video">
+                <source src="./assets/video/banner-video.mp4" type="video/mp4">
+            </video>
+            <article class="banner__description">
+                <h1 class="fw-bold">Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
+                <div class="content-center">
+                    <a class="fw-bold d-flex align-items-center gap-2" href="pages/products.html">
+                        <label>Ver productos</label>
+                        <img src="./assets/icons/arrow-right.svg" alt="Flecha derecha">
+                    </a>
+                </div>
+            </article>
+        </section>
 
         <section class="container">
             <h2 class="fw-bold">Nos diferenciamos por</h2>
@@ -109,25 +121,9 @@
 
         <section>
             <h2 class="fw-bold">Productos Populares</h2>
-            <div>
-                <article>
-                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
-                    <p>Blue Jacket</p>
-                </article>
-                <article>
-                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
-                    <p>Blue Jacket</p>
-                </article>
-                <article>
-                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
-                    <p>Blue Jacket</p>
-                </article>
-                <article>
-                    <img class="img-fluid" src="ruta-de-producto.jpg" alt="Imagen de Productos Populares">
-                    <p>Blue Jacket</p>
-                </article>
+            <div id="products">
+
             </div>
-            <!-- Contenido de productos destacados -->
         </section>
 
         <section>
@@ -199,6 +195,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="./javascript/popular-products.js"></script>
 </body>
 
 </html>

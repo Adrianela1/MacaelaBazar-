@@ -210,3 +210,37 @@ body{
     border: 1px solid #d0d0d0; /* Ajusta según sea necesario */
     color: #ffffff; /* Color del texto */
 }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Establece 4 columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    align-items: center; /* Centra el precio verticalmente si es necesario */
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-outline-secondary {
+    display: flex;
+    margin: 1.5rem 0 0 0; /* Alinea el botón a la izquierda */
+    padding: 12px 20px;
+    border: none;
+    background:#900c3f;
+    color: #f2f2f2;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-outline-secondary:hover {
+    background: #1F1F1F;
+}

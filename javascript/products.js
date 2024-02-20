@@ -10,8 +10,13 @@ const WOMENS_CLOTHING = "women's clothing";
 const ALBUM_API = "https://fakestoreapi.com/products";
 
 const fetchData = async () => {
-    const response = await fetch(ALBUM_API);
-    return await response.json();
+    try {
+        const response = await fetch(ALBUM_API);
+        return await response.json();
+    } catch (error) {
+        console.error("Error al obtener los productos: ", error);
+        return null;
+    }
 };
 
 /**
@@ -73,9 +78,7 @@ const removeElements = (products) => {
 
 window.addEventListener("DOMContentLoaded", async () => {
     // Mandar a la API
-    const listProducts = await fetchData().catch((error) =>
-        console.error("Error", error)
-    );
+    const listProducts = await fetchData();
 
     // mostrar el contenido inicialmente
     listProducts.forEach((product) => {

@@ -73,7 +73,9 @@ const removeElements = (products) => {
 
 window.addEventListener("DOMContentLoaded", async () => {
     // Mandar a la API
-    const listProducts = await fetchData();
+    const listProducts = await fetchData().catch((error) =>
+        console.error("Error", error)
+    );
 
     // mostrar el contenido inicialmente
     listProducts.forEach((product) => {

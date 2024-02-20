@@ -8,14 +8,12 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/product_delivery.css">
     <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../style.css">
-
     <title>Registro</title>
-
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <!-- Logo en el extremo izquierdo para escritorio y móvil -->
@@ -55,8 +53,154 @@
             </div>
         </div>
     </nav>
+    <main class="container mt-3">
+        <h2 class="primary-color">Elige la forma de entrega</h2>
+        <form class="mt-3">
+            <div>
+                <p class="store__name primary-color">Nancy Store</p>
+                <section class="row">
+                    <div class="store__products col-12 col-md-8">
+                        <article class="d-flex align-items-center gap-3 mb-3">
+                            <div class="product__container">
+                                <img class="product__img" src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+                                    alt="">
+                            </div>
+                            <p>Blue Jacket</p>
+                        </article>
+                        <article class="d-flex align-items-center gap-3 mb-3">
+                            <div class="product__container">
+                                <img class="product__img" src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+                                    alt="">
+                            </div>
+                            <p>Blue Jacket</p>
+                        </article>
+                        <article class="d-flex align-items-center gap-3 mb-3">
+                            <div class="product__container">
+                                <img class="product__img" src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+                                    alt="">
+                            </div>
+                            <p>Blue Jacket</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="mb-4">
+                            <label class="primary-color" for="lugar">Lugar de entrega</label>
+                            <input type="text" class="form-control" placeholder="" name="lugar" required>
+                        </div>
 
-    <main class="main-container">
+                        <div class="mb-4">
+                            <label class="primary-color" for="metro">Linea del metro</label>
+                            <input type="text" class="form-control" placeholder=" " name="metro" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="estacion">Estacion</label>
+                            <input type="text" class="form-control" placeholder="" name="estacion" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="fecha">Fecha</label>
+                            <input type="text" class="form-control" minlength="6" placeholder="" name="fecha" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="horario">Horario</label>
+                            <input type="horario" class="form-control" placeholder="" name="horario" required>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+            </div>
+            <div>
+                <p class="store__name primary-color">Ramona Store</p>
+                <section class="row">
+                    <div class="store__products col-12 col-md-8">
+                        <article class="d-flex align-items-center gap-3 mb-3">
+                            <div class="product__container">
+                                <img class="product__img" src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+                                    alt="">
+                            </div>
+                            <p>Blue Jacket</p>
+                        </article>
+                        <article class="d-flex align-items-center gap-3 mb-3">
+                            <div class="product__container">
+                                <img class="product__img" src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+                                    alt="">
+                            </div>
+                            <p>Blue Jacket</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="mb-4">
+                            <label class="primary-color" for="lugar">Lugar de entrega</label>
+                            <input type="text" class="form-control" placeholder="" name="lugar" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="metro">Linea del metro</label>
+                            <input type="text" class="form-control" placeholder=" " name="metro" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="estacion">Estacion</label>
+                            <input type="text" class="form-control" placeholder="" name="estacion" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="fecha">Fecha</label>
+                            <input type="text" class="form-control" minlength="6" placeholder="" name="fecha" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="primary-color" for="horario">Horario</label>
+                            <input type="horario" class="form-control" placeholder="" name="horario" required>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+            </div>
+        </form>
+        <div class="d-flex flex-column align-items-end">
+            <button type="submit" class="btn btn-primary" id="btn-continuar">Continuar</button>
+        </div>
+    </main>
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 company-name">
+                    <h3>Macaela</h3>
+                </div>
+                <div class="col-sm-6">
+                    <!-- Botones de Menú -->
+                    <ul class="d-flex list-inline">
+                        <li class="list-inline-item">
+                            <a href="/" class="btn btn-outline-light btn-sm">Inicio</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/pages/products.html" class="btn btn-outline-light btn-sm">Productos</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/pages/about-us.html" class="btn btn-outline-light btn-sm">Acerca de nosotros</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="/pages/contacto.html" class="btn btn-outline-light btn-sm">Contacto</a>
+                        </li>
+                    </ul>
+                    <!--aviso de pivacidad y terminos condiciones-->
+                    <!--gap: espaciado entre elementos-->
+                    <div class="d-flex gap-3">
+                        <a href="../assets/docs/MACAELA-Terminos.pdf" target="_blank">Términos y Condiciones</a>
+                        <a href="" target="_blank">Aviso de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- <main class="main-container">
 
 
 
@@ -117,7 +261,7 @@
         </div>
         </div>
 
-    </main>
+    </main> -->
 
 </body>
 

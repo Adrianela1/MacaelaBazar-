@@ -15,7 +15,8 @@
     object-fit: cover;
 }
 
-.primary-color {
+.primary-color,
+.store__name {
     color: #900c3f;
 }
 

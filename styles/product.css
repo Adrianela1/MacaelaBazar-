@@ -1,5 +1,7 @@
-.debug {
-    border: 1px solid red;
+.link-seller {
+    color: #900c3f;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .col-height {

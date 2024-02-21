@@ -1,7 +1,8 @@
 const productDeliveryForm = document.querySelector("#product-delivery-form");
 const btnContinue = document.querySelector("#btn-continuar");
 
-btnContinue.addEventListener("click", () => {
+productDeliveryForm.addEventListener("submit", (event) => {
+    event.preventDefault();
     const deliveryPoints = productDeliveryForm.querySelectorAll(".form");
 
     const listDeliveryPoints = [];
@@ -24,4 +25,5 @@ btnContinue.addEventListener("click", () => {
     });
 
     console.log(listDeliveryPoints);
+    window.location.href = "/pages/pay.html";
 });

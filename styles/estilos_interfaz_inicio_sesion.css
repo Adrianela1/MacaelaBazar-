@@ -46,10 +46,6 @@ input[type="password"] {
     padding: 0.5rem;
 }
 
-input[type="checkbox"] {
-    margin-right: 0.5rem;
-}
-
 .btn-primary {
     background-color: #900C3F;
     border-color: #900C3F;

@@ -1,5 +1,13 @@
+html, body {
+  height: 100%; /* Asegura que el html y body ocupen toda la altura de la ventana */
+  margin: 0; /* Elimina los márgenes por defecto */
+}
+
 body {
-  background-color: #f8f9fa;
+  position: relative; /* Esto permite que el footer se posicione en relación al body */
+  min-height: 100vh; /* Altura mínima del viewport */
+  margin: 0; /* Elimina el margen por defecto */
+  padding-bottom: 60px; /* Ajusta este valor al alto de tu footer */
 }
 
 .end-position {
@@ -61,4 +69,22 @@ img {
   background-color: #28a745;
   color: #ffffff;
   border-radius: 5px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Esto asegura que el footer esté al final del body */
+    width: 100%; /* Esto hace que el footer ocupe todo el ancho */
+    background-color: #900c3f;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.company-name {
+  font-size: large;
 }

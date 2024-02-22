@@ -1,32 +1,35 @@
 body { 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: auto;
   height: 100vh; 
   background: url('../assets/images/fondo_compra.jpeg')  no-repeat fixed center / cover;  
 }
 
-.container {
-  background-color: #ffffff; 
+.wrapper {
+  flex: 1; 
+  background-color: #fafafa;
+  width: 300px; /* Esto hace que el ancho del contenedor se ajuste al de su contenido hasta un máximo */
+  max-width: 1200px; /* Establece un ancho máximo para el contenedor */
+  margin: 80px auto; /* Centra el contenedor en la página y añade un margen superior e inferior */
+  padding: 20px; /* Añade un poco de espacio dentro del contenedor alrededor de su contenido */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra para destacar el contenedor */
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-  padding: 20px;
-  width: 700px;
-  height: 400px; 
 }
 
-  .center {
-    display: flex;
+.center {
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-  }
+    flex-direction: column; */
+}
   
-  .logo{
+.logo{
     width: 300px;
     height: 300px;
-  }
+}
 
-  h2{
+h2{
     color:  #900c3f;
-  }
+}

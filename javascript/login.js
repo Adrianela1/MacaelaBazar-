@@ -30,10 +30,8 @@ login_form.addEventListener("submit", async (event) => {
         .then((data) => {
             const token = data.token;
             localStorage.setItem("token", token);
-            console.log("Success");
+
             window.location.href = "/pages/cart.html";
         })
         .catch((error) => console.error("Error: ", error));
-
-    console.log("first");
 });

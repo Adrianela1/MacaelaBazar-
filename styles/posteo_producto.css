@@ -119,3 +119,17 @@ input[type="text_producto"] {
     background-color: #872341;
     color: #ffffff;
 }
+
+.footer {
+    background-color: #900c3f;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.company-name {
+    font-size: large;
+}

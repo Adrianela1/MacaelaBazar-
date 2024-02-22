@@ -38,3 +38,24 @@ hr {
     background-color: #872341;
     border-color: #872341;
 }
+
+.footer {
+    background-color: #900c3f;
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%; 
+  }
+  
+  .footer a {
+    color: #ffffff;
+    text-decoration: none; 
+    padding: 0 15px; 
+  }
+  
+  .company-name {
+    font-size: large;
+  }  
+
+.contentainer {
+    flex: 1; 
+}

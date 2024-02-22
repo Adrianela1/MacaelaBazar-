@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
 * {
-    font-family: "Oswald", sans-serif;
     margin: 0;
     padding: 0;
     scroll-padding-top: 2rem;
@@ -14,6 +12,10 @@
     --text-color: #030100;
     --bg-color: #575656;
     --color: #fbf8f8;
+}
+
+h2 {
+    color: var(--main-color);
 }
 
 #list-products {

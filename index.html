@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>E-Commerce Shop</title>
+    <title>Macaela</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                 </ul>
             </div>
 
-            <div class="d-flex gap-3 ms-auto">
+            <div class="d-flex align-items-center gap-3 ms-auto">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -46,9 +46,23 @@
                 <a href="/pages/cart.html">
                     <img src="./assets/icons/cart.svg" alt="Carrito de compras">
                 </a>
-                <a href="/pages/interfaz_inicio_sesion.html">
+                <a id="login" href="/pages/interfaz_inicio_sesion.html">
                     <img src="./assets/icons/profile-circle.svg" alt="Cuenta">
                 </a>
+                <div class="btn-group dropstart">
+                    <button class="btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/icons/profile-circle.svg" alt="Cuenta">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" id="store" href="/pages/adminvendedora.html">Ir a tu tienda</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" id="logout" href="/pages/interfaz_inicio_sesion.html">Cerrar
+                                sesión</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -77,7 +91,8 @@
                     </button>
                     <p class="fw-bold">Consumo local y responsable</p>
 
-                    <p class="texto">Ofrecemos nuestro servicio como  enlace entre las emprendedoras de la Ciudad de México y los compradores locales para la promoción y distribución de ropa y accesorios. 
+                    <p class="texto">Ofrecemos nuestro servicio como enlace entre las emprendedoras de la Ciudad de
+                        México y los compradores locales para la promoción y distribución de ropa y accesorios.
                     </p>
 
 
@@ -88,7 +103,9 @@
                         <img src="/assets/icons/shop.svg" alt="icono">
                     </button>
                     <p class="fw-bold">Accesibilidad</p>
-                    <p class="texto">Tanto emprendedoras como compradores pueden elegir promocionar o comprar entre diferentes productos; seleccionar día, fecha, lugar y horario en el que pueden adquirirlos. Sin envíos. Al alcance de una estación de Metro o Metrobús. 
+                    <p class="texto">Tanto emprendedoras como compradores pueden elegir promocionar o comprar entre
+                        diferentes productos; seleccionar día, fecha, lugar y horario en el que pueden adquirirlos. Sin
+                        envíos. Al alcance de una estación de Metro o Metrobús.
                     </p>
 
 
@@ -100,7 +117,8 @@
                     </button>
                     <p class="fw-bold">Moda sustentable</p>
 
-                    <p class="texto">Encontrarás artículos novedosos, de segunda mano y piezas únicas. Tu compra contribuye a la reducción de consumo fast-fashion.
+                    <p class="texto">Encontrarás artículos novedosos, de segunda mano y piezas únicas. Tu compra
+                        contribuye a la reducción de consumo fast-fashion.
                     </p>
 
 
@@ -112,7 +130,9 @@
                     </button>
                     <p class="fw-bold"> Ingresos </p>
                     <p class="texto">
-                    Contribuimos con la economía de nuestras emprendedoras al tiempo que crecemos como e-commerce a través de los talleres online y los eventos organizados por las emprendedoras y el equipo Macaela. 
+                        Contribuimos con la economía de nuestras emprendedoras al tiempo que crecemos como e-commerce a
+                        través de los talleres online y los eventos organizados por las emprendedoras y el equipo
+                        Macaela.
                     </p>
                 </article>
 
@@ -196,6 +216,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="./javascript/popular-products.js"></script>
+    <script src="./javascript/navbar.js"></script>
 </body>
 
 </html>

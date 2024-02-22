@@ -1,6 +1,4 @@
 body {
-    font-family:Arial, sans-serif;
-    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,33 +6,31 @@ body {
     min-height: 100vh;
 }
 
-header{
+header {
     color: #900c3f;
     font: bold;
     margin-left: 20px;
 }
 
-nav {
-    background-color: #fafafa;
-}
 
- .container {
-    flex: 2;
-    width: auto;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-   
-   
+.containerpedido {
+    width: 90%;
+    /* Utilizamos porcentajes para que se ajuste al ancho del viewport */
+    margin: auto;
+    /* Centramos el contenedor */
+    background: #FDFDFD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    }
- 
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
 .product {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    margin-left: auto;
 }
 
 .images {
@@ -63,12 +59,13 @@ nav {
 
 .place {
     margin: 0;
-       
+
 }
-.total{
+
+.total {
     float: right;
     margin-right: 50px;
- }
+}
 
 .info textarea {
     width: 50%;
@@ -82,7 +79,7 @@ nav {
 
 .status-buttons {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -93,29 +90,27 @@ button {
     cursor: pointer;
 }
 
-.confirmed {  
+.confirmed {
     background-color: #ffffff;
     color: rgb(10, 10, 10);
     border: solid #900c3f;
-    margin-left: 70px;  
+    margin-left: 70px;
 }
 
 .completed {
     background-color: #900c3f;
     color: white;
-    margin-right: 50px;    
+    margin-right: 50px;
+
 }
 
-.footer {
-    background-color: #900c3f;
-    color: #ffffff;
-    padding: 20px 0;
-}
+@media screen and (max-width: 768px) {
+    .containerpedido {
+        width: 100%;
+        padding: 10px;
+    }
 
-.footer a {
-    color: #ffffff;
-}
-
-.company-name {
-    font-size: large;
+    .product {
+        margin-left: 0;
+    }
 }

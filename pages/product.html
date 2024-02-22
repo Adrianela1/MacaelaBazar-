@@ -11,14 +11,16 @@
   <link rel="stylesheet" href="../styles/product.css">
   <link rel="stylesheet" href="../styles/navbar.css">
   <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- Logo en el extremo izquierdo para escritorio y móvil -->
-      <a class="navbar-brand" href="/">Macaela</a>
-
+      <a class="navbar-brand"  href="/">
+        <div class="logo-container"><img class="logo" src="../assets/images/Logo.png" alt="Logo de la página"></div> 
+    </a>
       <!-- Contenedor para los enlaces -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -60,6 +62,7 @@
       <section class="col-12 col-md-6 d-flex flex-column">
         <div>
           <h1 class="product__title mb-4"></h1>
+          <a href="/pages/profile.html" class="link-seller d-block mb-4 mt-2">Descubre más sobre Miranda</a>
           <p class="product__description mb-4"></p>
           <p class="product__price"></p>
         </div>

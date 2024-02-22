@@ -41,7 +41,3 @@ window.addEventListener("DOMContentLoaded", async () => {
         console.error("No se pudo obtener el producto.");
     }
 });
-
-document.getElementById("addToCartBtn").addEventListener("click", function() {
-    alert("Producto agregado al carrito");
-});

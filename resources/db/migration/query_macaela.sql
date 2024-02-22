@@ -44,3 +44,6 @@ INSERT INTO place_delivery (place_delivery_id, date_delivery, schedule_delivery,
 ('DEL-003', '2024-02-23', 'Noche', '7:00 PM - 10:00 PM', 'Linea 3', 'Estación C'),
 ('DEL-004', '2024-02-24', 'Mañana', '9:00 AM - 12:00 PM', 'Linea 4', 'Estación D'),
 ('DEL-005', '2024-02-25', 'Tarde', '2:00 PM - 5:00 PM', 'Linea 5', 'Estación E');
+
+
+SELECT * FROM users;

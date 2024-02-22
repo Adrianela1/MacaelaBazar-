@@ -42,6 +42,6 @@ window.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
-document.getElementById("addToCartBtn").addEventListener("click", function() {
+document.querySelector(".btn-cart").addEventListener("click", function() {
     alert("Producto agregado al carrito");
 });

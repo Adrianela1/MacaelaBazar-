@@ -13,5 +13,6 @@ const saveOnLocalStorage = (idProduct) => {
 
 btnCart.addEventListener("click", () => {
     const idProduct = getProductId();
+    alert("Se agregó al carrito");
     saveOnLocalStorage(idProduct);
 });

@@ -5,6 +5,11 @@ function submitForm() {
     const telefono = document.querySelector('input[name="telefono"]').value;
     const password = document.querySelector('input[name="password"]').value;
     const password2 = document.querySelector('input[name="password2"]').value;
+    const deseaVender = document.getElementById('check').checked;  
+
+    
+
+
 
     // Crear un objeto JSON con los valores
     const formData = {
@@ -12,7 +17,8 @@ function submitForm() {
         email: email,
         telefono: telefono,
         password: password,
-        password2: password2
+        password2: password2,
+        deseaVender: deseaVender
     };
 
     // Mostrar la información en un alert

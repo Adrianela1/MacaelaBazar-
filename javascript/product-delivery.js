@@ -1,29 +1,28 @@
-const productDeliveryForm = document.querySelector("#product-delivery-form");
-const btnContinue = document.querySelector("#btn-continuar");
+ const productDeliveryForm = document.querySelector("#product-delivery-form");
+ const btnContinue = document.querySelector("#btn-continuar");
 
-productDeliveryForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const deliveryPoints = productDeliveryForm.querySelectorAll(".form");
+ productDeliveryForm.addEventListener("submit", (event) => {
+     event.preventDefault();
+     const deliveryPoints = productDeliveryForm.querySelectorAll(".form");
 
-    const listDeliveryPoints = [];
+     const listDeliveryPoints = [];
 
-    deliveryPoints.forEach((deliveryPointForm) => {
-        const storeName = deliveryPointForm.querySelector(".store__name")
-            .textContent;
+     deliveryPoints.forEach((deliveryPointForm) => {
+         const storeName = deliveryPointForm.querySelector(".store__name")
+         .textContent;
+        const inputs = deliveryPointForm.querySelectorAll("select");
 
-        const inputs = deliveryPointForm.querySelectorAll("input");
+         const deliveryPoint = {};
 
-        const deliveryPoint = {};
+         inputs.forEach((input) => {
+             deliveryPoint[input.name] = input.value;
+         });
 
-        inputs.forEach((input) => {
-            deliveryPoint[input.name] = input.value;
-        });
+         deliveryPoint["store"] = storeName;
 
-        deliveryPoint["store"] = storeName;
+         listDeliveryPoints.push(deliveryPoint);
+     });
 
-        listDeliveryPoints.push(deliveryPoint);
-    });
-
-    console.log(listDeliveryPoints);
-    window.location.href = "/pages/pay.html";
-});
+     console.log(listDeliveryPoints);
+     window.location.href = "/pages/pay.html";
+ });

@@ -1,6 +1,7 @@
 const listProducts = document.querySelector("#list-products");
 const cartProducts = [];
 const PRODUCTS_API = "https://fakestoreapi.com/products/";
+const getPurchaseTotal = document.getElementById("total");
 
 const fetchProduct = async (productId) => {
     try {
@@ -11,6 +12,20 @@ const fetchProduct = async (productId) => {
         return null;
     }
 };
+
+const getTotalCart = () => {
+    let total = 0;
+console.log(cartProducts);
+    // Iterar sobre cada producto en el array cartProducts
+    cartProducts.forEach((product) => {
+        // Asumiendo que cada producto tiene una propiedad "price"
+        // Sumar el precio del producto al total
+        total += product.price;
+    });
+
+    // El resultado estará en la variable "total"
+    getPurchaseTotal.textContent = total
+}
 
 const createCartItemCard = ({ id, title, price, image }) => {
     // Definir elementos
@@ -82,6 +97,7 @@ const createCartItemCard = ({ id, title, price, image }) => {
         const productId = buttonDelete.dataset.productId;
         deleteItemCart(productId);
         card.remove(); // También puedes eliminar directamente el elemento del DOM si es necesario
+        getTotalCart();
     });
 
     listProducts.appendChild(card);
@@ -114,9 +130,11 @@ const deleteItemCart = (productId) => {
     );
 };
 
+
 window.addEventListener("DOMContentLoaded", async () => {
     const productsLocalStorage = localStorage.getItem("products");
     const productsArray = JSON.parse(productsLocalStorage);
+   
 
     for (const productId of productsArray) {
         const product = await fetchProduct(productId);
@@ -129,4 +147,26 @@ window.addEventListener("DOMContentLoaded", async () => {
     cartProducts.forEach((product) => {
         createCartItemCard(product);
     });
+    // Declarar una variable para almacenar la suma de los precios de los productos
+    getTotalCart();
 });
+// Definir el carrito de compras como un array de objetos
+/*const cart = [
+    { nombre: "Producto 1", precio: 20 },
+    { nombre: "Producto 2", precio: 30 },
+    { nombre: "Producto 3", precio: 10 }
+];
+
+// Función para sumar los precios de los productos en el carrito
+function sumarPrecios(carrito) {
+    let total = 0;
+    // Iterar sobre cada producto en el carrito y sumar su precio
+    for (let i = 0; i < carrito.length; i++) {
+        total += carrito[i].precio;
+    }
+    return total;
+}
+
+// Llamar a la función sumarPrecios y mostrar el total en la consola
+const totalDelCarrito = sumarPrecios(cart);
+console.log("Total del carrito:", totalDelCarrito);*/

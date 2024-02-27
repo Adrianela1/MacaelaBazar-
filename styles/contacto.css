@@ -39,12 +39,16 @@ body {
     
   }
   .button {
-    background-color: #900c3f
+    background-color: #900c3f;
+    border-color: #900c3f;
   
   }
   .button:hover{
-  background-color: #900c3f;
+    background-color: #872341;
+    border-color: #872341;
+
   }
+
   #success-message {
     display: none;
     margin-top: 20px;

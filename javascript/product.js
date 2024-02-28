@@ -21,7 +21,7 @@ const createProductView = ({ title, description, price, image }) => {
 
     productTitle.textContent = title;
     productDescription.textContent = description;
-    productPrice.textContent = `$${price}`;
+    productPrice.textContent = `$${price} mxn`;
     productImage.src = image;
     productImage.alt = title;
 };

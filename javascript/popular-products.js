@@ -26,7 +26,7 @@ const createCardProduct = ({ id, title, price, image }) => {
     imgCart.src = "../../assets/icons/cart-white.svg";
     imageProduct.src = image;
     productName.textContent = title;
-    productPrice.textContent = `$${price}`;
+    productPrice.textContent = `$${price} mxn`;
 
     buttonCart.appendChild(imgCart);
 

@@ -169,4 +169,18 @@ function sumarPrecios(carrito) {
 
 // Llamar a la función sumarPrecios y mostrar el total en la consola
 const totalDelCarrito = sumarPrecios(cart);
-console.log("Total del carrito:", totalDelCarrito);*/
+console.log("Total del carrito:", totalDelCarrito);*/ 
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtiene el primer elemento de la colección que coincide con la clase
+    const button = document.getElementsByClassName("btn primary btn-buy-now")[0];
+
+    button.addEventListener("click", function() {
+        if (cartProducts.length != 0) {
+            window.location.href = "pages/productdelivery";
+        } else {
+            alert("No has agregado nada al carrito");
+        }
+    });
+});
+

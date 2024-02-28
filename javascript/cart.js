@@ -87,7 +87,7 @@ const createCartItemCard = ({ id, title, price, image }) => {
     productImage.src = image;
     productImage.alt = title;
     productName.textContent = title;
-    productPrice.textContent = `$${price}`;
+    productPrice.textContent = `$${price} mxn`;
     productSize.textContent = `Talla: X`;
 
     buttonDelete.dataset.productId = id;

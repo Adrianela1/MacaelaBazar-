@@ -1,12 +1,10 @@
 const form = document.querySelector("#pay-form");
 const getInputValue = (id) => {
-    console.log(document.querySelector(`#${id}`));
     return document.querySelector(`#${id}`).value;
 };
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(event);
     const cardNumber = getInputValue("card-number");
     const username = getInputValue("username");
     const expirationDate = getInputValue("expiration-date");
@@ -17,7 +15,6 @@ form.addEventListener("submit", (event) => {
         expirationDate,
         securityCode,
     });
-    console.log(jsonData); // Muestra los datos en formato JSON en la
     alert(jsonData);
     window.location.href = "/pages/payment_confirmation.html";
 });

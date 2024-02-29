@@ -19,9 +19,6 @@ const fetchData = async () => {
     }
 };
 
-/**
- * Se encarga de crear la tarjeta de producto
- */
 const createCardProduct = ({ id, title, price, image }) => {
     const link = document.createElement("a");
     const card = document.createElement("article");

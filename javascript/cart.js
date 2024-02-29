@@ -15,7 +15,6 @@ const fetchProduct = async (productId) => {
 
 const getTotalCart = () => {
     let total = 0;
-console.log(cartProducts);
     // Iterar sobre cada producto en el array cartProducts
     cartProducts.forEach((product) => {
         // Asumiendo que cada producto tiene una propiedad "price"
@@ -108,14 +107,10 @@ const deleteItemCart = (productId) => {
 
     const index = cartProducts.findIndex((product) => product.id === productId);
 
-    console.log(index);
-
     // Si se encuentra el producto, elimínalo utilizando splice
     if (index !== -1) {
         cartProducts.splice(index, 1);
     }
-
-    console.log(cartProducts);
 
     const cardToDelete = document.querySelector(
         `[data-product-id="${productId}"]`
@@ -130,12 +125,10 @@ const deleteItemCart = (productId) => {
     );
 };
 
-
 window.addEventListener("DOMContentLoaded", async () => {
     const productsLocalStorage = localStorage.getItem("products");
     const productsArray = JSON.parse(productsLocalStorage);
    
-
     for (const productId of productsArray) {
         const product = await fetchProduct(productId);
 
@@ -150,26 +143,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Declarar una variable para almacenar la suma de los precios de los productos
     getTotalCart();
 });
-// Definir el carrito de compras como un array de objetos
-/*const cart = [
-    { nombre: "Producto 1", precio: 20 },
-    { nombre: "Producto 2", precio: 30 },
-    { nombre: "Producto 3", precio: 10 }
-];
 
-// Función para sumar los precios de los productos en el carrito
-function sumarPrecios(carrito) {
-    let total = 0;
-    // Iterar sobre cada producto en el carrito y sumar su precio
-    for (let i = 0; i < carrito.length; i++) {
-        total += carrito[i].precio;
-    }
-    return total;
-}
-
-// Llamar a la función sumarPrecios y mostrar el total en la consola
-const totalDelCarrito = sumarPrecios(cart);
-console.log("Total del carrito:", totalDelCarrito);*/ 
 
 document.addEventListener('DOMContentLoaded', function() {
     // Obtiene el primer elemento de la colección que coincide con la clase
@@ -177,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     button.addEventListener("click", function() {
         if (cartProducts.length != 0) {
-            window.location.href = "pages/productdelivery";
+            window.location.href = "product-delivery.html";
         } else {
             alert("No has agregado nada al carrito");
         }

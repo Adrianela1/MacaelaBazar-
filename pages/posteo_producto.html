@@ -68,7 +68,7 @@
             </div>
         </div>
     </nav>
-    <main class="main-container">
+    <main class="main-container pb-3">
 
         <h3 class="text-left mt-3">AÑADIR UN NUEVO PRODUCTO</h3>
 
@@ -99,76 +99,26 @@
                             <option value="categoria2">Categoría 2</option>
                             <!-- Agrega más opciones según  -->
                         </select>
-                        <img src="./image/Imagen de WhatsApp 2024-02-08 a las 21.42.24_30602d64.jpg" class="select-icon"
-                            alt="Ícono de menú desplegable">
+
                     </div>
                 </div>
 
                 <!-- AQUI VA LA TALLA -->
 
-                <!-- <div class="mb-4">
-                    <p for="Talla">Talla</p>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaS" name="talla" value="S" required checked>
-                        <label for="tallaS">S</label>
-                    </div>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaM" name="talla" value="M">
-                        <label for="tallaM">M</label>
-                    </div>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaL" name="talla" value="L">
-                        <label for="tallaL">L</label>
-                    </div>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaXL" name="talla" value="XL">
-                        <label for="tallaXL">XL</label>
+                <div class="mb-4">
+                    <label for="talla">Talla</label>
+                    <div class="select-icon-container">
+                        <select class="form-select form-select" name="talla" required>
+                            <option value="" selected>Seleccione una talla</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="EG">EG</option>
+                        </select>
                     </div>
                 </div>
-                 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- <div class="mb-4">
-                    <p for="Talla">Talla</p>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaS" name="talla" value="S" required checked>
-                        <label for="tallaS">S</label>
-                    </div>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaM" name="talla" value="M">
-                        <label for="tallaM">M</label>
-                    </div>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaL" name="talla" value="L">
-                        <label for="tallaL">L</label>
-                    </div>
-                    <div class="radio-button">
-                        <input type="radio" id="tallaXL" name="talla" value="XL">
-                        <label for="tallaXL">XL</label>
-                    </div>
-                </div> -->
-
+                
                 <!-- 'AQUI VA BOTON DE IMAGEN PARA AGREGAR IMAGENES' -->
-
                 <div class="mb-4">
                     <label for="img-product">Imagen del producto:</label>
                     <input type="file" class="img-product" name="img" required>
@@ -176,7 +126,7 @@
 
 
 
-                <div class="d-grid">
+                <div class="d-grid mb-5">
                     <button type="summit" class="btn btn-primary" id="btn-inicio">Crear</button>
                 </div>
 

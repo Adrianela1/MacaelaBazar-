@@ -1,3 +1,12 @@
+//Recuperar lo que existe en el local Storage
+const productsLocalStorage = localStorage.getItem("products");
+const productsArray = JSON.parse(productsLocalStorage);
+console.log(productsArray);
+//Regresar a la página productos 
+if (productsArray && productsArray.length === 0) {
+    window.location.href = "products.html";
+} 
+
 const form = document.querySelector("#pay-form");
 const getInputValue = (id) => {
     return document.querySelector(`#${id}`).value;

@@ -108,3 +108,11 @@ h2 {
         padding: 1rem;
     }
 }
+
+.btn-background {
+    background-color: #900c3f;
+    color: #ffffff;
+    margin-top: 20px; /* Ajusta este valor según sea necesario */
+    display: flex;
+    justify-content: end;
+}

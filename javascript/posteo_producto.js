@@ -7,7 +7,9 @@ function submitForm() {
 
     // Recuperar el valor de la talla seleccionada
     const talla = document.querySelector('select[name="talla"]').value;
-    const imagen = document.querySelector('select[name="imagen"]').value;
+
+    const imagen = document.querySelector('input[name="imagen"]').value;
+
     // Crear un objeto JSON con los valores
     const formData = {
         producto: nombreProducto,
@@ -15,7 +17,7 @@ function submitForm() {
         precio: precio,
         categoria: categoria,
         talla: talla,
-       imagen: imagen,
+        imagen: imagen,
     };
 
     // Mostrar la información en un alert

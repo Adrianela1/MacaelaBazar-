@@ -1,11 +1,12 @@
+import { PRODUCT } from "./constants.js";
+
 const listProducts = document.querySelector("#list-products");
 const cartProducts = [];
-const PRODUCTS_API = "https://fakestoreapi.com/products/";
 const getPurchaseTotal = document.getElementById("total");
 
 const fetchProduct = async (productId) => {
     try {
-        const response = await fetch(PRODUCTS_API + productId);
+        const response = await fetch(PRODUCT + productId);
         return await response.json();
     } catch (error) {
         console.error(`Error al obtener los productos del carrito: ${error}`);
@@ -23,10 +24,10 @@ const getTotalCart = () => {
     });
 
     // El resultado estará en la variable "total"
-    getPurchaseTotal.textContent = total
-}
+    getPurchaseTotal.textContent = total;
+};
 
-const createCartItemCard = ({ id, title, price, image }) => {
+const createCartItemCard = ({ id, description, price, image }) => {
     // Definir elementos
     const card = document.createElement("article");
     const productBox = document.createElement("div");
@@ -84,8 +85,8 @@ const createCartItemCard = ({ id, title, price, image }) => {
     // Asignar valores
 
     productImage.src = image;
-    productImage.alt = title;
-    productName.textContent = title;
+    productImage.alt = description;
+    productName.textContent = description;
     productPrice.textContent = `$${price} mxn`;
     productSize.textContent = `Talla: X`;
 
@@ -128,7 +129,7 @@ const deleteItemCart = (productId) => {
 window.addEventListener("DOMContentLoaded", async () => {
     const productsLocalStorage = localStorage.getItem("products");
     const productsArray = JSON.parse(productsLocalStorage);
-   
+
     for (const productId of productsArray) {
         const product = await fetchProduct(productId);
 
@@ -144,10 +145,11 @@ window.addEventListener("DOMContentLoaded", async () => {
     getTotalCart();
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     // Obtiene el primer elemento de la colección que coincide con la clase
-    const button = document.getElementsByClassName("btn primary btn-buy-now")[0];
+    const button = document.getElementsByClassName(
+        "btn primary btn-buy-now"
+    )[0];
 
     button.addEventListener("click", function() {
         if (cartProducts.length != 0) {
@@ -157,4 +159,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-

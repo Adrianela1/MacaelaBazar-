@@ -1,12 +1,14 @@
+import { PRODUCTS } from "./constants.js";
+
 const products = document.querySelector("#products");
-const PRODUCT_API = "https://fakestoreapi.com/products?limit=4";
+// const PRODUCT_API = "https://fakestoreapi.com/products?limit=4";
 
 const fetchData = async () => {
-    const response = await fetch(PRODUCT_API);
+    const response = await fetch(PRODUCTS);
     return await response.json();
 };
 
-const createCardProduct = ({ id, title, price, image }) => {
+const createCardProduct = ({ id, description, price, image }) => {
     const link = document.createElement("a");
     const card = document.createElement("article");
 
@@ -25,7 +27,7 @@ const createCardProduct = ({ id, title, price, image }) => {
 
     imgCart.src = "../../assets/icons/cart-white.svg";
     imageProduct.src = image;
-    productName.textContent = title;
+    productName.textContent = description;
     productPrice.textContent = `$${price} mxn`;
 
     buttonCart.appendChild(imgCart);
@@ -57,7 +59,7 @@ const createCardProduct = ({ id, title, price, image }) => {
 window.addEventListener("DOMContentLoaded", async () => {
     const listProducts = await fetchData();
 
-    listProducts.forEach((product) => {
-        createCardProduct(product);
-    });
+    for (let i = 4; i <= 7; i++) {
+        createCardProduct(listProducts[i]);
+    }
 });

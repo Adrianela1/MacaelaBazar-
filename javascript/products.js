@@ -21,7 +21,7 @@ const fetchData = async () => {
     }
 };
 
-const createCardProduct = ({ id, title, price, image }) => {
+const createCardProduct = ({ id, description, price, image }) => {
     const link = document.createElement("a");
     const card = document.createElement("article");
 
@@ -40,7 +40,7 @@ const createCardProduct = ({ id, title, price, image }) => {
 
     imgCart.src = "../../assets/icons/cart-white.svg";
     imageProduct.src = image;
-    productName.textContent = title;
+    productName.textContent = description;
     productPrice.textContent = `$${price} mxn`;
 
     buttonCart.appendChild(imgCart);

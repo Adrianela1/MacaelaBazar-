@@ -1,6 +1,6 @@
 import { PRODUCT } from "./constants.js";
 
-const fetchProduct = async (productId) => {
+export const fetchProduct = async (productId) => {
     try {
         const response = await fetch(PRODUCT + productId);
         return await response.json();
@@ -13,13 +13,13 @@ const fetchProduct = async (productId) => {
 const selectProductElement = (atribute) =>
     document.querySelector(`.product__${atribute}`);
 
-const createProductView = ({ title, description, price, image }) => {
+const createProductView = ({ description, price, image }) => {
     const productTitle = selectProductElement("title");
     const productDescription = selectProductElement("description");
     const productPrice = selectProductElement("price");
     const productImage = selectProductElement("image");
 
-    productTitle.textContent = title;
+    productTitle.textContent = description;
     productDescription.textContent = description;
     productPrice.textContent = `$${price} mxn`;
     productImage.src = image;

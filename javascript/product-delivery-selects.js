@@ -1,8 +1,12 @@
+import { fetchProduct } from "./product.js";
+
 const productDeliveryFormContainer = document.querySelector(
     "#product-delivery-form"
 );
 
-const createCardProduct = ({ id, image, title }) => {
+const products = [];
+
+const createCardProduct = ({ id, image, description }) => {
     const card = document.createElement("article");
     const productContainerImage = document.createElement("div");
     const productImage = document.createElement("img");
@@ -15,8 +19,8 @@ const createCardProduct = ({ id, image, title }) => {
     productId.classList.add("product__id");
 
     productImage.src = image;
-    productImage.alt = title;
-    productName.textContent = title;
+    productImage.alt = description;
+    productName.textContent = description;
     productId.textContent = id;
 
     productContainerImage.appendChild(productImage);
@@ -99,7 +103,7 @@ const generateRandomDates = () => {
     return formattedDateList;
 };
 
-const createBlockProductDeliveryForm = () => {
+const createBlockProductDeliveryForm = (productsList) => {
     const form = document.createElement("div");
     form.classList.add("form");
 
@@ -115,24 +119,20 @@ const createBlockProductDeliveryForm = () => {
     storeProducts.classList.add("store__products", "col-12", "col-md-8");
     inputsColumn.classList.add("col-12", "col-md-4");
 
-    storeProducts.appendChild(
-        createCardProduct({
-            id: 1,
-            image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-            title: "nombre",
-        })
-    );
+    products.forEach((product) => {
+        storeProducts.appendChild(createCardProduct(product));
+    });
 
-    inputs = [
+    const inputs = [
         {
             labelName: "Lugar de entrega",
-            name: "lugar",
+            name: "schedule",
             optionTextDefault: "Selecciona un lugar de entrega",
             options: ["Metro", "Metrobus", "Trolebus", "Cablebus"],
         },
         {
             labelName: "Línea del metro",
-            name: "linea-m",
+            name: "line",
             optionTextDefault: "Selecciona una linea del metro",
             options: [
                 "Linea A",
@@ -151,7 +151,7 @@ const createBlockProductDeliveryForm = () => {
         },
         {
             labelName: "Estación",
-            name: "estacion",
+            name: "station",
             optionTextDefault: "Selecciona una estación",
             options: [
                 "Zapata",
@@ -172,7 +172,7 @@ const createBlockProductDeliveryForm = () => {
         },
         {
             labelName: "Hora",
-            name: "horario",
+            name: "time",
             optionTextDefault: "Selecciona una hora",
             options: ["10:00 am", "3:00 pm", "4:00 pm", "6:00 pm", "8:00 pm"],
         },
@@ -191,4 +191,30 @@ const createBlockProductDeliveryForm = () => {
     productDeliveryFormContainer.appendChild(form);
 };
 
-createBlockProductDeliveryForm();
+window.addEventListener("DOMContentLoaded", async () => {
+    const productsLocalStorage = localStorage.getItem("products");
+    const productsArray = JSON.parse(productsLocalStorage);
+
+    for (const productId of productsArray) {
+        const product = await fetchProduct(productId);
+
+        if (product) {
+            products.push(product);
+        }
+    }
+
+    createBlockProductDeliveryForm(products);
+
+    const btnContainer = document.createElement("div");
+    btnContainer.classList.add("d-flex", "flex-column", "align-items-end");
+
+    const buttonContinue = document.createElement("button");
+    buttonContinue.classList.add("btn", "btn-primary");
+    buttonContinue.setAttribute("type", "submit");
+    buttonContinue.setAttribute("id", "btn-continuar");
+    buttonContinue.textContent = "Continuar";
+
+    btnContainer.appendChild(buttonContinue);
+
+    productDeliveryFormContainer.appendChild(btnContainer);
+});

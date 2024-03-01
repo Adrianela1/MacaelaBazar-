@@ -27,7 +27,7 @@ const getTotalCart = () => {
     getPurchaseTotal.textContent = total;
 };
 
-const createCartItemCard = ({ id, description, price, image }) => {
+const createCartItemCard = ({ id, description, price, image, size }) => {
     // Definir elementos
     const card = document.createElement("article");
     const productBox = document.createElement("div");
@@ -88,7 +88,7 @@ const createCartItemCard = ({ id, description, price, image }) => {
     productImage.alt = description;
     productName.textContent = description;
     productPrice.textContent = `$${price} mxn`;
-    productSize.textContent = `Talla: X`;
+    productSize.textContent = `Talla: ${size}`;
 
     buttonDelete.dataset.productId = id;
 

@@ -1,4 +1,6 @@
-export const PRODUCTS = "http://localhost:8080/products/all";
-export const SIGNUP = "http://localhost:8080/signup";
-export const LOGIN = "http://localhost:8080/login";
-export const PRODUCT = "http://localhost:8080/products/";
+const base = "http://localhost:8080";
+export const PRODUCTS = base + "/products/all";
+export const SIGNUP = base + "/signup";
+export const LOGIN = base + "/login";
+export const PRODUCT = base + "/products/";
+export const PLACE_DELIVERY = base + "/placedelivery";

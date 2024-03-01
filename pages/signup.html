@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/estilos_interfaz_registro.css">
+    <link rel="stylesheet" href="../styles/signup.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../style.css">
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="Nombre">Nombre</label>
+                    <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" placeholder="Nombre y apellidos" name="username" required>
                 </div>
 
@@ -91,8 +91,8 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="Telefono">Numero de telefono</label>
-                    <input type="tel" class="form-control" placeholder="+52" name="telefono" required>
+                    <label for="edad">Edad</label>
+                    <input type="text" class="form-control" placeholder="18" name="edad" required>
                 </div>
 
                 <div class="mb-4">
@@ -107,8 +107,8 @@
                 </div>
 
                 <div class="mb-4 checkbox-container">
-                    <input type="checkbox" id="check" />
-                    <label for="check-vendor"> ¿Deseas vender tus productos?</label>
+                    <input name="check-vendor" type="checkbox" id="check" />
+                    <label for="check-vendor">¿Deseas vender tus productos?</label>
                 </div>
 
                 <div class="d-grid">
@@ -118,9 +118,9 @@
                 <div class="p-options">
                     <hr class="hr-1">
                     <p class="text-center mt-3">Creando una cuenta usted esta aceptando nuestros<br><a class="links red"
-                            href=""> Terminos y condiciones </a></p>
+                            href="../assets/docs/MACAELA-Terminos.pdf">Términos y condiciones </a></p>
                     <hr class="hr-2">
-                    <p class="text-center mt-3"><a href="/pages/login.html"> ¿Ya tienes una cuenta?</a>
+                    <p class="text-center mt-3"><a href="/pages/login.html">¿Ya tienes una cuenta?</a>
                     </p>
                 </div>
             </form>
@@ -162,7 +162,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="../javascript/navbar.js"></script>
-    <script src="../javascript/interfaz_registro.js"></script>
+    <script type="module" src="../javascript/signup.js"></script>
 </body>
 
 </html>

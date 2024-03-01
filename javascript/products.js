@@ -1,3 +1,5 @@
+import { PRODUCTS } from "./constants.js";
+
 const products = document.getElementById("products");
 const mensFilter = document.getElementById("mens");
 const electronicsFilter = document.getElementById("electronics");
@@ -7,7 +9,7 @@ const MENS_CLOTHING = "men's clothing";
 const ELECTRONICS = "electronics";
 const WOMENS_CLOTHING = "women's clothing";
 
-const ALBUM_API = "https://fakestoreapi.com/products";
+const ALBUM_API = PRODUCTS;
 
 const fetchData = async () => {
     try {
@@ -22,7 +24,7 @@ const fetchData = async () => {
 /**
  * Se encarga de crear la tarjeta de producto
  */
-const createCardProduct = ({ id, title, price, image }) => {
+const createCardProduct = ({ id, description, price, image }) => {
     const link = document.createElement("a");
     const card = document.createElement("article");
 
@@ -41,7 +43,7 @@ const createCardProduct = ({ id, title, price, image }) => {
 
     imgCart.src = "../../assets/icons/cart-white.svg";
     imageProduct.src = image;
-    productName.textContent = title;
+    productName.textContent = description;
     productPrice.textContent = `$${price}`;
 
     buttonCart.appendChild(imgCart);

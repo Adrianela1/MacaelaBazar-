@@ -1,7 +1,7 @@
-const login_form = document.querySelector("#login_form");
+const loginForm = document.querySelector("#login_form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const login = document.querySelector("#login");
+// const login = document.querySelector("#login");
 
 const AUTH_END_POINT = "https://fakestoreapi.com/auth/login";
 
@@ -18,7 +18,7 @@ const authenticateUser = async (loginData) => {
     return await response.json();
 };
 
-login_form.addEventListener("submit", async (event) => {
+loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const userCredentials = {

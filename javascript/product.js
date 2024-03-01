@@ -1,8 +1,8 @@
-const PRODUCT_API = "https://fakestoreapi.com/products/";
+import { PRODUCT } from "./constants.js";
 
 const fetchProduct = async (productId) => {
     try {
-        const response = await fetch(PRODUCT_API + productId);
+        const response = await fetch(PRODUCT + productId);
         return await response.json();
     } catch (error) {
         console.error("Error al obtener detalles del producto:", error);

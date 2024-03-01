@@ -1,9 +1,11 @@
+import { LOGIN } from "./constants.js";
+
 const loginForm = document.querySelector("#login_form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 // const login = document.querySelector("#login");
 
-const AUTH_END_POINT = "https://fakestoreapi.com/auth/login";
+const AUTH_END_POINT = LOGIN;
 
 const getInputValue = (id) => document.querySelector(`#${id}`).value;
 
@@ -22,16 +24,16 @@ loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const userCredentials = {
-        username: getInputValue("email"),
+        email: getInputValue("email"),
         password: getInputValue("password"),
     };
 
     await authenticateUser(userCredentials)
         .then((data) => {
-            const token = data.token;
+            const token = data.jwtToken;
             localStorage.setItem("token", token);
 
-            window.location.href = "/pages/cart.html";
+            window.location.href = "/pages/products.html";
         })
         .catch((error) => console.error("Error: ", error));
 });

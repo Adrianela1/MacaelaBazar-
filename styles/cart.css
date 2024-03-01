@@ -62,11 +62,14 @@
 .btn-buy-now {
     background-color: var(--main-color);
     color: var(--color);
+    border: transparent;
+    border-radius: 5px;
 }
 
 .btn-primary:hover {
     background: var(--text-color);
 }
+
 
 .btn-danger {
     display: flex;
@@ -95,10 +98,6 @@
 .price {
     font-weight: 500;
 }
-
-/* .add-cart:hover {
-    background: hsl(249, 32%, 17%);
-} */
 
 .product__container {
     height: 80px;

@@ -4,22 +4,6 @@
     padding: 0;
 }
 
-/*.content {
-    flex: 1; 
-}
-*/
-/*nav {
-    background-color: #fafafa;
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-}
-*/
-/*body{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Usa la altura completa de la ventana */
-
 .btn-background {
     background-color: #900c3f;
     color: #ffffff;
@@ -57,25 +41,3 @@
 .btn-outline-secondary:hover {
     background: #1F1F1F;
 }
-
-/*.footer {
-    background-color: #900c3f;
-    color: #ffffff;
-    padding: 20px 0;
-    width: 100%; 
-  }
-  
-  .footer a {
-    color: #ffffff;
-    text-decoration: none; 
-    padding: 0 15px; 
-  }
-  
-  .company-name {
-    font-size: large;
-  }  
-
-.contentainer {
-    flex: 1; 
-}
-*/

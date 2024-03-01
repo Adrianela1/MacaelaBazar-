@@ -1,6 +1,7 @@
 const listProducts = document.querySelector("#list-products");
 const cartProducts = [];
 const PRODUCTS_API = "https://fakestoreapi.com/products/";
+const getPurchaseTotal = document.getElementById("total");
 
 const fetchProduct = async (productId) => {
     try {
@@ -11,6 +12,19 @@ const fetchProduct = async (productId) => {
         return null;
     }
 };
+
+const getTotalCart = () => {
+    let total = 0;
+    // Iterar sobre cada producto en el array cartProducts
+    cartProducts.forEach((product) => {
+        // Asumiendo que cada producto tiene una propiedad "price"
+        // Sumar el precio del producto al total
+        total += product.price;
+    });
+
+    // El resultado estará en la variable "total"
+    getPurchaseTotal.textContent = total
+}
 
 const createCartItemCard = ({ id, title, price, image }) => {
     // Definir elementos
@@ -72,7 +86,7 @@ const createCartItemCard = ({ id, title, price, image }) => {
     productImage.src = image;
     productImage.alt = title;
     productName.textContent = title;
-    productPrice.textContent = `$${price}`;
+    productPrice.textContent = `$${price} mxn`;
     productSize.textContent = `Talla: X`;
 
     buttonDelete.dataset.productId = id;
@@ -82,6 +96,7 @@ const createCartItemCard = ({ id, title, price, image }) => {
         const productId = buttonDelete.dataset.productId;
         deleteItemCart(productId);
         card.remove(); // También puedes eliminar directamente el elemento del DOM si es necesario
+        getTotalCart();
     });
 
     listProducts.appendChild(card);
@@ -92,14 +107,10 @@ const deleteItemCart = (productId) => {
 
     const index = cartProducts.findIndex((product) => product.id === productId);
 
-    console.log(index);
-
     // Si se encuentra el producto, elimínalo utilizando splice
     if (index !== -1) {
         cartProducts.splice(index, 1);
     }
-
-    console.log(cartProducts);
 
     const cardToDelete = document.querySelector(
         `[data-product-id="${productId}"]`
@@ -117,7 +128,7 @@ const deleteItemCart = (productId) => {
 window.addEventListener("DOMContentLoaded", async () => {
     const productsLocalStorage = localStorage.getItem("products");
     const productsArray = JSON.parse(productsLocalStorage);
-
+   
     for (const productId of productsArray) {
         const product = await fetchProduct(productId);
 
@@ -129,4 +140,21 @@ window.addEventListener("DOMContentLoaded", async () => {
     cartProducts.forEach((product) => {
         createCartItemCard(product);
     });
+    // Declarar una variable para almacenar la suma de los precios de los productos
+    getTotalCart();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtiene el primer elemento de la colección que coincide con la clase
+    const button = document.getElementsByClassName("btn primary btn-buy-now")[0];
+
+    button.addEventListener("click", function() {
+        if (cartProducts.length != 0) {
+            window.location.href = "product-delivery.html";
+        } else {
+            alert("No has agregado nada al carrito");
+        }
+    });
+});
+

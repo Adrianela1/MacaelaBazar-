@@ -36,6 +36,5 @@ productDeliveryForm.addEventListener("submit", (event) => {
         listDeliveryPoints.push(deliveryPoint);
     });
 
-    console.log(listDeliveryPoints);
     window.location.href = "/pages/pay.html";
 });

@@ -21,10 +21,7 @@ const fetchData = async () => {
     }
 };
 
-/**
- * Se encarga de crear la tarjeta de producto
- */
-const createCardProduct = ({ id, description, price, image }) => {
+const createCardProduct = ({ id, title, price, image }) => {
     const link = document.createElement("a");
     const card = document.createElement("article");
 
@@ -43,8 +40,8 @@ const createCardProduct = ({ id, description, price, image }) => {
 
     imgCart.src = "../../assets/icons/cart-white.svg";
     imageProduct.src = image;
-    productName.textContent = description;
-    productPrice.textContent = `$${price}`;
+    productName.textContent = title;
+    productPrice.textContent = `$${price} mxn`;
 
     buttonCart.appendChild(imgCart);
 

@@ -1,3 +1,5 @@
+import { PRODUCTS } from "./constants.js";
+
 const products = document.getElementById("products");
 const mensFilter = document.getElementById("mens");
 const electronicsFilter = document.getElementById("electronics");
@@ -7,7 +9,7 @@ const MENS_CLOTHING = "men's clothing";
 const ELECTRONICS = "electronics";
 const WOMENS_CLOTHING = "women's clothing";
 
-const ALBUM_API = "https://fakestoreapi.com/products";
+const ALBUM_API = PRODUCTS;
 
 const fetchData = async () => {
     try {
